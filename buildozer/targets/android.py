@@ -812,6 +812,8 @@ class TargetAndroid(Target):
                     fd.write(line)
                 else:
                     fd.write(line.decode('utf-8'))
+            if line.find('\n') == -1:
+                fd.write(u'\n')
             for index, ref in enumerate(references):
                 fd.write(u'android.library.reference.{}={}\n'.format(index + 1,
                                                                      ref))

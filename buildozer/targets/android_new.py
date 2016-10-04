@@ -65,9 +65,9 @@ class TargetAndroidNew(TargetAndroid):
                  dist_name, self._p4a_bootstrap, requirements, " ".join(options)),
             get_stdout=True)[0]
 
-    def _update_libraries_references(self, dist_dir):
-        # UNSUPPORTED YET
-        pass
+    #def _update_libraries_references(self, dist_dir):
+    #    # UNSUPPORTED YET
+    #    pass
 
     def get_dist_dir(self, dist_name):
         return join(self._build_dir, 'dists', dist_name)
